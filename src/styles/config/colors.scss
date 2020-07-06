@@ -8,15 +8,14 @@
 /**
  * Brand.
  */
-$COLOR_PRIMARY: rgb(0, 0, 0);
-$COLOR_SECONDARY: rgb(99, 115, 129);
+$COLOR_PRIMARY: rgb(0, 51, 102);
+$COLOR_SECONDARY: rgb(187, 187, 187);
 
 /**
  * Typography.
  */
-$COLOR_TEXT_PRIMARY: rgb(0, 0, 0);
-$COLOR_TEXT_SECONDARY: rgb(48, 48, 48);
-$COLOR_TEXT_LIGHT: rgb(94, 94, 94);
+$COLOR_TEXT_PRIMARY: rgb(0, 51, 102);
+$COLOR_TEXT_SECONDARY: rgb(155, 155, 155);
 $COLOR_TEXT_INVERSE: rgb(255, 255, 255);
 
 /**
@@ -35,6 +34,13 @@ $COLOR_LINK: rgb(69, 110, 150);
 $COLOR_LINK_HOVER: rgb(0, 68, 136);
 $COLOR_BUTTON: rgb(0, 115, 230);
 $COLOR_BUTTON_HOVER: rgb(0, 68, 136);
+
+/**
+ * Swiper Carousel
+ */
+$PAGINATION_BULLET: rgb(209, 209, 209);
+$PAGINATION_BULLET_ACTIVE: rgb(51, 51, 51);
+$SWIPER_BUTTON: rgb(151, 151, 151);
 
 /**
  * Support.

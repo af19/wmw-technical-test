@@ -8,4 +8,42 @@
   text-decoration: none;
   user-select: none;
   appearance: none;
+
+  &:focus {
+    outline: none; 
+  }
+}
+
+.button--primary, .button--secondary {
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: $WEIGHT_BOLD;
+  height: 42px;
+  width: 125px;
+
+  @include mq($from: large) {
+    font-size: 1.8rem;
+    height: 55px;
+    width: 175px;
+  }
+}
+
+.button--primary {
+  color: $COLOR_TEXT_INVERSE;
+  background-color: $COLOR_PRIMARY;
+
+  &:focus {
+    color: $COLOR_TEXT_INVERSE;
+  }
+}
+
+.button--secondary {
+  color: $COLOR_PRIMARY;
+  background-color: $COLOR_BACKGROUND_WHITE;
+
+  &:focus {
+    color: $COLOR_PRIMARY;
+  }
 }

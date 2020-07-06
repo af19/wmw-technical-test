@@ -11,17 +11,81 @@
   position: relative;
   text-decoration: none;
   width: 100%;
+  font-size: 1.8rem;
 
   &__add-to-cart {
-    background-color: $COLOR_SUPPORT_ERROR;
-    color: $COLOR_TEXT_INVERSE;
-    padding: $SPACING_S $SPACING_XL;
-    text-decoration: none;
+    display: none;
   }
 
-  @include mq($from: small) {
-    &__add-to-cart {
-      background-color: $COLOR_PRIMARY;
+  &:hover {
+    .product-card__add-to-cart {
+      @include mq($from: large) {
+        display: flex;
+        height: 55px;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        right: 0;
+        transform: translateY(-70px); // Positions button over image
+        width: 175px;
+      }
+
+      @include mq($from: wide) {
+        height: 47px;
+        width: 270px;
+      }
     }
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    transition: transform 500ms;
+
+    &:hover {
+      @include mq($from: large) {
+        transform-origin: 50% 50%;
+        transform: scale(1.1);
+      }
+      
+    }
+  }
+
+  &__title {
+    font-weight: $WEIGHT_BOLD;
+    line-height: $LINE_HEIGHT_DISPLAY;
+    margin: $SPACING_L 0;
+
+    @include mq($from: wide) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__price {
+    color: $COLOR_TEXT_SECONDARY;
+    font-weight: $WEIGHT_LIGHT;
+  }
+
+  &__badges {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__badge {
+    align-items: center;
+    background-color: $COLOR_PRIMARY;
+    color: $COLOR_TEXT_INVERSE;
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: $WEIGHT_BOLD;
+    height: 26px;
+    justify-content: center;
+    margin: $SPACING_M $SPACING_M 0 0;
+    width: 56px;
   }
 }

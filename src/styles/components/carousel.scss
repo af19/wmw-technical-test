@@ -1,0 +1,97 @@
+/**
+ * Component: Swiper Carousel
+ * -----------------------------------------------------------------------------
+ * Custom styling for Swiper carousel.
+ *
+ */
+.swiper-container {
+    &.swiper-container--custom {
+        margin-bottom: $SPACING_3XL;
+        padding-top: $SPACING_S;
+        width: calc(100% - 20px);
+
+        @include mq($from: large) {
+            margin-bottom: $SPACING_4XL;
+            padding: 0 50px;
+            width: 924px;
+        }
+
+        @include mq($from: wide) {
+            width: 1390px;
+        }
+
+        .swiper-wrapper {
+            margin-bottom: $SPACING_4XL;
+        }
+
+        .swiper-slide {
+            width: map-get($mq-breakpoints, tiny) - 36px; // minimum carousel tile width
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            display: none;
+
+            &::after {
+                color: $SWIPER_BUTTON;
+                font-size: 2.75rem;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &.swiper-button-disabled {
+                opacity: 1;
+            }
+
+            @include mq($from: large) {
+                background-color: $COLOR_BACKGROUND_WHITE;
+                display: flex;
+                height: 100%;
+                margin: 0;
+                padding-bottom: 150px; // Centers buttons relative to carousel image
+                top: 0;
+                width: 50px;
+                
+            }
+        }
+
+        .swiper-button-prev {
+            @include mq($from: large) {
+                justify-content: flex-start;
+                left: 0;
+            }
+        }
+
+        .swiper-button-next {
+            @include mq($from: large) {
+                right: 0;
+                justify-content: flex-end;
+            }
+        }
+
+        .swiper-pagination-bullets {
+            bottom: 0;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: $PAGINATION_BULLET;
+            border-radius: 50%;
+            height: 7px;
+            opacity: 1;
+            width: 7px;
+
+            &-active {
+                background-color: $PAGINATION_BULLET_ACTIVE;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 6px;
+        }
+    }
+}
